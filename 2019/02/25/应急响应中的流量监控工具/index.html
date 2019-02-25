@@ -2,11 +2,11 @@
 &nbsp;&nbsp;</a></span><span class="page-tag-anchor"><a href="/tags/linux" itemprop="url">#linux
 &nbsp;&nbsp;</a></span><span class="post-meta"></span><br><br><h2 id="iftop"><a href="#iftop" class="headerlink" title="iftop"></a>iftop</h2><p>特点：可以根据IP、端口开看流量大小</p>
 <p>使用方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iftop -P -i eth1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iftop -P -i eth1</span><br></pre></td></tr></table></figure>
 <p>-P显示端口号，-i指定网卡<br><img src="https://ww1.sinaimg.cn/large/007rAy9hgy1g0il9xs3mcj31c00u0u0z.jpg" alt></p>
 <h2 id="netatop"><a href="#netatop" class="headerlink" title="netatop"></a>netatop</h2><p>特点：可以按进程、tcp、udp类型分被查看流量</p>
 <p>安装使用过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yum install atop</span><br><span class="line">wget http://www.atoptool.nl/download/netatop-0.3.tar.gz</span><br><span class="line">tar -zxvf netatop-0.3.tar.gz</span><br><span class="line">cd netatop-0.3/</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">//启动netatop</span><br><span class="line">./netatop.init start</span><br><span class="line">//运行atop，按n进行netatop</span><br><span class="line">atop</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install atop</span><br><span class="line">wget http://www.atoptool.nl/download/netatop-0.3.tar.gz</span><br><span class="line">tar -zxvf netatop-0.3.tar.gz</span><br><span class="line">cd netatop-0.3/</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">//启动netatop</span><br><span class="line">./netatop.init start</span><br><span class="line">//运行atop，按n进行netatop</span><br><span class="line">atop</span><br></pre></td></tr></table></figure>
 <p><img src="https://ww1.sinaimg.cn/large/007rAy9hgy1g0ilb9kkv3j31c00u0b2c.jpg" alt></p>
 <blockquote>
 <p><a href="https://segmentfault.com/q/1010000002903028" target="_blank" rel="noopener">https://segmentfault.com/q/1010000002903028</a></p>
