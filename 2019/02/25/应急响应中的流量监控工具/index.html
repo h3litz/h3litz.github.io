@@ -1,12 +1,22 @@
-doctype html
-html(lang='en-us')
-  head
-    include _head
-    include _mixins
-  body(itemscope, itemtype='https://schema.org/WebPage')
-    header(itemscope, itemtype='https://schema.org/WPHeader')
-      include _header
-      .space
-    main(itemscope, itemtype='https://schema.org/Blog')
-      include _content
-    include _scripts
+<!DOCTYPE html><html lang="en-us"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>应急响应中的流量监控工具 | h3litz的随笔</title><meta name="description"><meta name="generator" content="h3litz的随笔"><meta name="author" content="h3litz"><meta name="keywords" content="security,pentest,web"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=0"><link rel="stylesheet" type="text/css" href="/styles/screen.css"><link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png"><link rel="icon" type="image/png" sizes="128x128" href="/images/favicon-128.png"><link rel="icon" type="image/png" sizes="196x196" href="/images/favicon-196x196.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="mstile-144x144.png"><meta name="msapplication-square70x70logo" content="mstile-70x70.png"><meta name="msapplication-square150x150logo" content="mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="mstile-310x150.png"><meta name="msapplication-square310x310logo" content="mstile-310x310.png"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body itemscope itemtype="https://schema.org/WebPage"><header itemscope itemtype="https://schema.org/WPHeader"><div class="logo"></div><h1><a href="/" alt="h3litz的随笔" title="h3litz的随笔" itemprop="headline">h3litz的随笔</a></h1><p itemprop="description">记录安全各种知识问答</p><nav itemscope itemtype="https://schema.org/SiteNavigationElement"><ul><li itemprop="name"><a href="/ " alt="home" title="home" itemprop="url">home</a></li><li itemprop="name"><a href="/articles" alt="articles" title="articles" itemprop="url">articles</a></li><li itemprop="name"><a href="/author" alt="author" title="author" itemprop="url">author</a></li></ul></nav><div class="space"></div></header><main itemscope itemtype="https://schema.org/Blog"><article class="full"><h1 itemprop="headline" class="post-heading">应急响应中的流量监控工具</h1><span class="page-tag-anchor"><a href="/tags/tools" itemprop="url">#tools
+&nbsp;&nbsp;</a></span><span class="page-tag-anchor"><a href="/tags/linux" itemprop="url">#linux
+&nbsp;&nbsp;</a></span><span class="post-meta"></span><br><br><h2 id="iftop"><a href="#iftop" class="headerlink" title="iftop"></a>iftop</h2><p>特点：可以根据IP、端口开看流量大小</p>
+<p>使用方式</p>
+<pre><code>iftop -P -i eth1
+</code></pre><p>-P显示端口号，-i指定网卡<br><img src="https://ww1.sinaimg.cn/large/007rAy9hgy1g0il9xs3mcj31c00u0u0z.jpg" alt></p>
+<h2 id="netatop"><a href="#netatop" class="headerlink" title="netatop"></a>netatop</h2><p>特点：可以按进程、tcp、udp类型分被查看流量</p>
+<p>安装使用过程</p>
+<pre><code>yum install atop
+wget http://www.atoptool.nl/download/netatop-0.3.tar.gz
+tar -zxvf netatop-0.3.tar.gz
+cd netatop-0.3/
+make &amp;&amp; make install
+//启动netatop
+./netatop.init start
+//运行atop，按n进行netatop
+atop
+</code></pre><p><img src="https://ww1.sinaimg.cn/large/007rAy9hgy1g0ilb9kkv3j31c00u0b2c.jpg" alt></p>
+<blockquote>
+<p><a href="https://segmentfault.com/q/1010000002903028" target="_blank" rel="noopener">https://segmentfault.com/q/1010000002903028</a></p>
+</blockquote>
+</article><br><br><br><br><br></main></body></html>
